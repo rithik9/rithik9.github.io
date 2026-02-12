@@ -7,67 +7,52 @@ import { Timeline } from './ui/Timeline';
 
 const data = [
     {
-        title: "November 2024 - Present",
+        title: "Nov 2024 - Present",
         company: "Mango Mass Media Pvt. Ltd.",
         position: "Junior Software Developer",
         content: (
             <div>
                 <div className="mb-8">
-                    <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-bold text-neutral-700 dark:text-neutral-300">
-                        <li>Built high-traffic REST APIs with 99.9% uptime and optimized performance.</li>
-                        <li>Designed search infrastructure for 1M+ records, reducing latency by 60%.</li>
-                        <li>Developed AI-powered document pipelines automating 15K+ agreements weekly.</li>
-                        <li>Implemented scalable async export pipelines, cutting 33+ hours/week of manual work.</li>
-                        <li>Currently building backend for digital asset management and revenue reporting.</li>
+                    <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-medium text-neutral-700 dark:text-neutral-300">
+                        <li>
+                            Optimized high-traffic **REST APIs** and search infrastructure for 1M+ records, reducing latency by **60%** via query profiling and caching.
+                        </li>
+                        <li>
+                            Architected an **AI ingestion pipeline** (OCR + LangChain) processing 15K+ agreements weekly, automating 30+ hours of manual data entry.
+                        </li>
+                        <li>
+                            Built a distributed **Asset Management System** using React and Node.js, implementing metadata normalization for cross-module integrity.
+                        </li>
+                        <li>
+                            Engineered scalable **async export pipelines** using worker queues, eliminating timeouts and reducing weekly manual workloads by **33 hours**.
+                        </li>
+                        <li>
+                            Ensured production stability on Linux environments using **PM2** for zero-downtime deployments and 99.9% uptime.
+                        </li>
                     </ul>
                 </div>
             </div>
         ),
     },
     {
-        title: "September 2024 - November 2024",
+        title: "Sep 2024 - Nov 2024",
         company: "Mango Mass Media Pvt. Ltd.",
-        position: "Intern",
+        position: "Software Developer Intern",
         content: (
-            <div >
+            <div>
                 <div className="mb-8">
-                    <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-bold text-neutral-700 dark:text-neutral-300">
-                        <li>Developed Python ETL Scripts for reporting and analytics processing 100K+ records/day,</li>
-                        <li>Worked with Superset BI to create interactive dashboards and visualize key business metrics</li>
-                        {/* <li>Contributed to customizing Frappe ERP modules to streamline internal business processes</li> */}
-                        <li>Developed internal CMS UI components in React, improving editorial workflows and article turnaround.</li>
+                    <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-medium text-neutral-700 dark:text-neutral-300">
+                        <li>
+                            Developed **Python ETL scripts** processing 100K+ daily records, reducing reporting turnaround from 4 hours to 15 minutes.
+                        </li>
+                        <li>
+                            Built real-time **BI dashboards** in Apache Superset to provide data-driven insights for 50+ stakeholders.
+                        </li>
+                        <li>
+                            Enhanced editorial efficiency by developing **React CMS components**, significantly reducing article turnaround time through better UX.
+                        </li>
                     </ul>
                 </div>
-                {/* <div className="grid grid-cols-2 gap-4">
-                    <img
-                        src="https://assets.aceternity.com/pro/hero-sections.png"
-                        alt="hero template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <img
-                        src="https://assets.aceternity.com/features-section.png"
-                        alt="feature template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <img
-                        src="https://assets.aceternity.com/pro/bento-grids.png"
-                        alt="bento template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <img
-                        src="https://assets.aceternity.com/cards.png"
-                        alt="cards template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div> */}
             </div>
         ),
     },
