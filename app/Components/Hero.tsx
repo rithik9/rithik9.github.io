@@ -1,20 +1,15 @@
 import React from 'react'
-import { Spotlight } from './ui/Spotlight'
 import { cn } from './../utils/cn';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa6';
+import { FaLinkedin } from 'react-icons/fa6';
+import { FaFilePdf } from "react-icons/fa";
+
 import ProfilePhoto from './ProfilePhoto';
 
 const Hero = () => {
     return (
-        <div className="pb-20 pt-36">
-            {/* Spotlights */}
-            <div>
-                <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
-                <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
-                <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
-            </div>
+        <div >
 
             {/* Hero Section with Dot Background */}
             <div className="relative flex h-screen w-full items-center justify-center bg-white dark:bg-black" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
@@ -46,13 +41,28 @@ const Hero = () => {
                             filter={false}
                         />
                         {/* <p className='text-center md-tracking-wider mb-4 text-small md:text-lg lg:text-2xl'>Hi, I&apos;m Rithik, an SDE developer based in Hyderabad, India.</p> */}
-                        <a href="#about">
-                            <MagicButton
-                                title="Show my work"
-                                icon={<FaLocationArrow />}
-                                position='left'
-                            />
-                        </a>
+                        <div className="flex items-center gap-5">
+                            {/* <a href="#about"> */}
+                                <MagicButton
+                                    title="LinkedIn"
+                                    icon={<FaLinkedin />}
+                                    position='left'
+                                    handleClick={() => {
+                                        window.open("https://www.linkedin.com/in/your-profile/", "_blank", "noopener,noreferrer");
+                                    }}
+                                />
+                            {/* </a> */}
+
+                            {/* <a href="#about"> */}
+                                <MagicButton
+                                    title="Resume"
+                                    icon={<FaFilePdf />}
+                                    position='left'
+                                    handleClick={() => window.open('/resume/Resume_Rithik_Kishen_Saride.pdf', '_blank')}
+                                />
+                            {/* </a> */}
+                        </div>
+
                     </div>
                 </div>
             </div>

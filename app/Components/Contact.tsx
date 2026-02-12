@@ -33,7 +33,7 @@ const Contact = () => {
                     toast.success("Message sent successfully!", {
                         description: (
                             <span>
-                                Thanks for reaching out. We'll get back to you
+                                Thanks for reaching out. I'll get back to you
                                 shortly.
                             </span>
                         ),
@@ -44,8 +44,7 @@ const Contact = () => {
                     toast.error("Oops! Failed to send message.", {
                         description: (
                             <span>
-                                Please try again in a bit. If the issue persists,
-                                contact support.
+                                Please try again in a bit.
                             </span>
                         ),
                     });
@@ -98,10 +97,14 @@ const Contact = () => {
             {/* Contact Content */}
             <div className="py-20 z-10 w-full flex flex-col items-center justify-center">
                 <h1 className="heading">
-                    Contact <span className="text-purple-400">Me</span>
+                    Contact Me
                 </h1>
-                <div className="mt-12 relative inline-flex h-full w-1/2 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-900">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2e1a47_0%,#1e1b8c_50%,#2e1a47_100%)]" />
+                <div
+                    className="mt-12 relative inline-flex w-full 
+                    max-w-[92%] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[640px]
+                    overflow-hidden rounded-xl
+                    border border-black/9 dark:border-white/10 bg-transparent"
+                >
 
                     <div className="flex flex-col p-7 h-full w-full rounded-xl bg-[var(--background)] text-[var(--foreground)] backdrop-blur-3xl gap-2 z-10">
                         <div className="flex justify-start">
@@ -113,16 +116,16 @@ const Contact = () => {
 
                         <form className="flex flex-col my-2 w-full items-center justify-center" ref={formRef} onSubmit={handleSubmit}>
                             <LabelInputContainer className="mb-4">
-                                <Label htmlFor="firstname">First name</Label>
-                                <InputField id="firstname" name='from_name' placeholder="Tyler" type="text" required />
+                                {/* <Label htmlFor="firstname">First name</Label> */}
+                                <InputField id="firstname" name='from_name' placeholder="Name" type="text" required disabled={loading}/>
                             </LabelInputContainer>
                             <LabelInputContainer className="mb-4">
-                                <Label htmlFor="email">Email Address</Label>
-                                <InputField id="email" name="reply_to" placeholder="projectmayhem@fc.com" type="email" required />
+                                {/* <Label htmlFor="email">Email Address</Label> */}
+                                <InputField id="email" name="reply_to" placeholder="Email Address" type="email" required disabled={loading}/>
                             </LabelInputContainer>
                             <LabelInputContainer className="mb-4">
-                                <Label htmlFor="message">Message</Label>
-                                <InputField id="message" name='message' placeholder="Purpose" type="text" required />
+                                {/* <Label htmlFor="message">Message</Label> */}
+                                <InputField id="message" name='message' placeholder="Message" type="text" required disabled={loading}/>
                             </LabelInputContainer>
                             <button
                                 className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] disabled:opacity-50 disabled:cursor-not-allowed"
@@ -136,7 +139,8 @@ const Contact = () => {
                                     </span>
                                 ) : (
                                     <>
-                                        Sign up &rarr;
+                                        Submit 
+                                        {/* &rarr; */}
                                         <BottomGradient />
                                     </>
                                 )}

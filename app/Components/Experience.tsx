@@ -12,24 +12,30 @@ const data = [
         position: "Junior Software Developer",
         content: (
             <div>
-                <p className="mb-8 text-lg font-bold text-neutral-800 md:text-xl dark:text-neutral-200">
-                    Currently working on developing a digital asset management application for the entertainment industry to streamline the process acquisition and sale of movies and music. Also worked on implementing a data pipeline for generating monthly revenue reports for income from other sources.
-                </p>
+                <div className="mb-8">
+                    <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-bold text-neutral-700 dark:text-neutral-300">
+                        <li>Built high-traffic REST APIs with 99.9% uptime and optimized performance.</li>
+                        <li>Designed search infrastructure for 1M+ records, reducing latency by 60%.</li>
+                        <li>Developed AI-powered document pipelines automating 15K+ agreements weekly.</li>
+                        <li>Implemented scalable async export pipelines, cutting 33+ hours/week of manual work.</li>
+                        <li>Currently building backend for digital asset management and revenue reporting.</li>
+                    </ul>
+                </div>
             </div>
         ),
     },
     {
-        title: "September 2024",
+        title: "September 2024 - November 2024",
         company: "Mango Mass Media Pvt. Ltd.",
         position: "Intern",
         content: (
             <div >
                 <div className="mb-8">
                     <ul className="list-disc pl-5 space-y-3 text-lg md:text-xl font-bold text-neutral-700 dark:text-neutral-300">
-                        <li>Developed Python ETL Scripts for reporting and analytics</li>
+                        <li>Developed Python ETL Scripts for reporting and analytics processing 100K+ records/day,</li>
                         <li>Worked with Superset BI to create interactive dashboards and visualize key business metrics</li>
-                        <li>Contributed to customizing Frappe ERP modules to streamline internal business processes</li>
-                        <li>Assisted in front-end development using React.js to build user-friendly web interfaces</li>
+                        {/* <li>Contributed to customizing Frappe ERP modules to streamline internal business processes</li> */}
+                        <li>Developed internal CMS UI components in React, improving editorial workflows and article turnaround.</li>
                     </ul>
                 </div>
                 {/* <div className="grid grid-cols-2 gap-4">
@@ -89,7 +95,7 @@ const Experience = () => {
                 <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'></div>
                 <div className="py-20 w-full">
                     <h1 className="heading">
-                        My <span className="text-purple-400">work experience</span>
+                        My work experience
                     </h1>
 
                     <div className="relative w-full overflow-clip">
