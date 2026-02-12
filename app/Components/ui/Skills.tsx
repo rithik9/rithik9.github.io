@@ -19,7 +19,7 @@ const iconList = [
     { id: '10', src: '/css-3-svgrepo-com.svg', alt: 'CSS' },
     { id: '11', src: '/typescript-logo-svgrepo-com.svg', alt: 'Typescript' },
     { id: '12', src: '/tailwind-svgrepo-com.svg', alt: 'Tailwind' },
-    { id: '12', src: '/next-js-svgrepo-com.svg', alt: 'NextJS' },
+    { id: '13', src: '/next-js-svgrepo-com.svg', alt: 'NextJS' },
 
 ];
 
@@ -45,64 +45,6 @@ const backend = [
     { id: '4', src: '/docker-svgrepo-com.svg', alt: 'Docker' },
 ]
 
-// const databaseCloud = [
-
-// ]
-
-// const SkillCategory = ({ title, icons }: { title: string; icons: typeof programmingLanguages }) => (
-//      <GlareCard className="flex flex-col items-center justify-center p-6">
-//     <h2 className="text-xl font-semibold mb-6">{title}</h2>
-
-//     <div className="w-full grid place-items-center gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-//       {icons.map((item) => (
-//         <motion.div
-//           key={item.id}
-//           whileHover={{ scale: 1.1 }}
-//           transition={{ type: 'spring', stiffness: 300 }}
-//           className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-md dark:bg-zinc-800 glow-purple"
-//         >
-//           <img
-//             src={item.src}
-//             alt={item.alt}
-//             className="h-full w-full object-contain rounded-full bg-white p-1.5"
-//             title={item.alt}
-//           />
-//         </motion.div>
-//       ))}
-//     </div>
-//   </GlareCard>
-// );
-
-// const SkillCategory = ({
-//   title,
-//   icons,
-// }: {
-//   title: string;
-//   icons: typeof programmingLanguages;
-// }) => (
-//   <div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-black">
-//     <h2 className="text-xl font-semibold mb-4 text-center">{title}</h2>
-
-//     <div className="w-full grid place-items-center gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-//       {icons.map((item) => (
-//         <motion.div
-//           key={item.id}
-//           whileHover={{ scale: 1.1 }}
-//           transition={{ type: 'spring', stiffness: 300 }}
-//           className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-md dark:bg-zinc-800 glow-purple"
-//         >
-//           <img
-//             src={item.src}
-//             alt={item.alt}
-//             className="h-full w-full object-contain rounded-full bg-white p-1.5"
-//             title={item.alt}
-//           />
-//         </motion.div>
-//       ))}
-//     </div>
-//   </div>
-// );
-
 const SkillCategory = ({
     title,
     icons,
@@ -112,39 +54,38 @@ const SkillCategory = ({
     icons: typeof programmingLanguages;
     showDivider?: boolean;
 }) => (
-    // <div className="flex flex-col justify-between space-y-4 relative rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none">
-    // <div className="flex flex-col justify-between space-y-4 relative rounded-xl border border-neutral-200 p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:shadow-none"
-    //     style={{
-    //         backgroundColor: "var(--background)",
-    //         color: "var(--foreground)"
-    //     }}
-    // >
     <div className="flex flex-col justify-between space-y-4 relative">
         <h2 className="text-center font-sans mb-8 font-bold text-neutral-600 dark:text-neutral-200">{title}</h2>
 
         <div className="flex flex-wrap justify-center gap-4">
             {icons.map((item) => (
-                <motion.div
-                    key={item.id}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                    className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-md dark:bg-zinc-800 glow-purple"
-                >
+                // <motion.div
+                //     key={item.id}
+                //     whileHover={{ scale: 1.05 }}
+                //     transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+                //     className="flex flex-row items-center justify-center bg-black dark:bg-black rounded-md p-4 shadow-sm gap-3"
+                // >
+                <div className="flex flex-row items-center justify-center bg-black dark:bg-black rounded-md p-4 shadow-sm gap-3">
+
                     <img
                         src={item.src}
                         alt={item.alt}
-                        className="h-full w-full object-contain rounded-full bg-white p-1.5"
-
+                        className="h-7 w-7 object-contain"
                         title={item.alt}
+                        onContextMenu={(e) => e.preventDefault()}
+                        draggable={false}
                     />
-                </motion.div>
+                    <h2 className="text-base font-semibold font-sans text-gray-200">{item.alt}</h2>
+                </div>
+                // </motion.div>
             ))}
         </div>
 
-        {showDivider && <div
+
+        {/* {showDivider && <div
             className="absolute left-0 top-0 h-full w-[2px] rounded bg-current opacity-40"
             style={{ backgroundColor: 'var(--foreground)' }}
-        />}
+        />} */}
     </div>
 );
 
@@ -176,42 +117,13 @@ const Skills = () => {
             <div className="relative z-20 flex max-w-5xl flex-col items-center justify-center">
                 <div className="py-20 w-full">
                     <h1 className="heading">
-                        My <span className="text-purple-400">skills</span>
+                        My skills
                     </h1>
-                    {/* <GlareCard className="flex flex-col items-center justify-center">
-                        <div className="mt-12 w-full grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-5">
-                            {iconList.map((item) => (
-                                <motion.div
-                                    key={item.id}
-                                    whileHover={{ scale: 1.1 }}
-                                    transition={{ type: 'spring', stiffness: 300 }}
-                                    className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-md dark:bg-zinc-800 glow-purple"
-                                >
-                                    <img
-                                        src={item.src}
-                                        alt={item.alt}
-                                        className="h-full w-full object-contain rounded-full bg-white p-2"
-                                        title={item.alt}
-                                    />
-                                </motion.div>
-                            ))}
-                        </div>
-                    </GlareCard> */}
-                    {/* <div className="mt-12 flex flex-row gap-5">
-                        <SkillCategory title="Programming Languages" icons={programmingLanguages}/>
-                        <Divider orientation="vertical" variant="middle" flexItem />
 
-                        <SkillCategory title="Frontend" icons={frontEnd} />
-                        <Divider orientation="vertical" variant="middle" flexItem />
-
-                        <SkillCategory title="Backend / DevOps" icons={backend} />
-                    </div> */}
-
-
-                    <div className="mt-12 flex flex-row gap-5 items-stretch">
+                    <div className="mt-12 flex flex-col gap-5 items-stretch">
                         <SkillCategory title="Programming Languages" icons={programmingLanguages} />
 
-                        {/* Divider with fade effect */}
+                        {/* Divider with fade effect
                         <div className="relative flex items-stretch">
                             <Divider
                                 orientation="vertical"
@@ -223,11 +135,11 @@ const Skills = () => {
                                 }}
                             />
                             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[var(--background)] via-transparent to-[var(--background)]" />
-                        </div>
+                        </div> */}
 
                         <SkillCategory title="Frontend" icons={frontEnd} />
 
-                        {/* Divider with fade effect */}
+                        {/* Divider with fade effect
                         <div className="relative flex items-stretch">
                             <Divider
                                 orientation="vertical"
@@ -239,7 +151,7 @@ const Skills = () => {
                                 }}
                             />
                             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[var(--background)] via-transparent to-[var(--background)]" />
-                        </div>
+                        </div> */}
 
                         <SkillCategory title="Backend / DevOps" icons={backend} />
                     </div>

@@ -34,12 +34,22 @@ const MagicButton = ({ title, icon, position, handleClick, otherClasses
     //         </span>
     //     </button>
 
-        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-900">
-            {/* Darker spinning conic gradient */}
-            <span className="absolute inset-[-1000%] animate-[spin_1s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2e1a47_0%,#1e1b8c_50%,#2e1a47_100%)]" />
+        <button
+            className="relative inline-flex h-12 items-center justify-center cursor-pointer
+            rounded-full border border-black/10 dark:border-white/10
+            hover:bg-black/20 dark:hover:bg-neutral-800/70 transition-all duration-300 ease-in-out
+            bg-transparent"
+            onClick={handleClick}
 
-            {/* Dark inner button background */}
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-neutral-900 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 z-10">
+        >
+            <span
+                className="inline-flex h-full w-full items-center justify-center
+                rounded-full
+                px-7 text-sm font-medium
+                 bg-black/10 text-black
+                 dark:bg-neutral-900 dark:text-white
+                backdrop-blur-3xl gap-2"
+            >
                 {position === 'left' && icon}
                 {title}
                 {position === 'right' && icon}
