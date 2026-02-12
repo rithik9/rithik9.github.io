@@ -48,7 +48,7 @@ const Hero = () => {
                                     icon={<FaLinkedin />}
                                     position='left'
                                     handleClick={() => {
-                                        window.open("https://www.linkedin.com/in/your-profile/", "_blank", "noopener,noreferrer");
+                                        window.open("https://www.linkedin.com/in/rithik-kishen-saride-4718581b5/", "_blank", "noopener,noreferrer");
                                     }}
                                 />
                             {/* </a> */}
