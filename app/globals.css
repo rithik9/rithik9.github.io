@@ -105,10 +105,9 @@ h1, h2, h3, p { margin: 0; }
 .skill-row { display: grid; grid-template-columns: 46px 220px minmax(0, 1fr); gap: 18px; border-bottom: 1px solid var(--line); padding: 30px 0 31px; align-items: start; transition: padding-left .22s; }
 .skill-row:hover { padding-left: 10px; }
 .skill-index { font-size: 11px; color: var(--accent); font-weight: 700; padding-top: 5px; }
-.skill-row h3 { font-size: 17px; letter-spacing: -.03em; margin-bottom: 10px; }
-.skill-detail { font-size: 12px; line-height: 1.55; color: var(--muted); }
+.skill-row h3 { font-size: 16px; letter-spacing: -.03em; }
 .skill-names { font-size: 13px; line-height: 2.1; color: var(--body); margin-top: -4px; }
-.skills-outro { font-size: 15px; line-height: 1.6; color: var(--muted); margin-top: 34px; }
+.role + .role, .education { margin-top: 56px; }
 
 /* Contact */
 .contact-section { padding-bottom: 128px; }

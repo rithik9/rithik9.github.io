@@ -11,30 +11,22 @@ export default function Skills() {
 
       <div className="section-main">
         <div className="section-heading reveal">
-          <p className="overline">A FEW THINGS I KNOW</p>
+          <p className="overline">STACK</p>
           <h2>
             Skills<span>.</span>
           </h2>
-          <p>Tools change. The fundamentals, not so much.</p>
+          <p>What I use day to day.</p>
         </div>
 
         <div className="skills-list">
           {skills.map((s, i) => (
             <article className="skill-row reveal" key={s.title}>
               <span className="skill-index">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{s.title}</h3>
-                <p className="skill-detail">{s.detail}</p>
-              </div>
+              <h3>{s.title}</h3>
               <p className="skill-names">{s.names}</p>
             </article>
           ))}
         </div>
-
-        <p className="skills-outro reveal">
-          A good tool is the one that solves the problem. I&apos;m not
-          particularly loyal to frameworks.
-        </p>
       </div>
     </section>
   );

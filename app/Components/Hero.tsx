@@ -1,13 +1,12 @@
 import ProfilePhoto from "./ProfilePhoto";
-
-const RESUME = "/resume/Resume_Rithik_Kishen_Saride.pdf";
+import { links } from "@/data";
 
 export default function Hero() {
   return (
     <section className="hero container" id="me">
       <div className="hero-intro reveal">
         <span className="small-marker" />
-        <span>A PERSONAL PORTFOLIO</span>
+        <span>PORTFOLIO</span>
         <span className="hero-intro-right">BASED IN HYDERABAD, INDIA</span>
       </div>
 
@@ -18,8 +17,8 @@ export default function Hero() {
             Rithik<span className="cursor">_</span>
           </h1>
           <p className="hero-headline reveal">
-            A software engineer who likes{" "}
-            <em>making the complicated feel simple.</em>
+            Full stack software engineer working in{" "}
+            <em>React, Node.js and Python.</em>
           </p>
           <p className="hero-description reveal">
             I work across backend systems, web products and data workflows. Most
@@ -28,15 +27,15 @@ export default function Hero() {
           </p>
           <div className="hero-actions reveal">
             <a className="text-link text-link-primary" href="#experience">
-              A look at my work <span>↘</span>
+              Experience <span>↘</span>
             </a>
             <a
               className="text-link"
-              href={RESUME}
+              href={links.resume}
               target="_blank"
               rel="noopener noreferrer"
             >
-              My résumé <span>↗</span>
+              Résumé (PDF) <span>↗</span>
             </a>
           </div>
         </div>
@@ -45,7 +44,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-footer reveal">
-        <span>SCROLL TO READ MORE ↓</span>
+        <span>SCROLL ↓</span>
         <span>WORKING WITH NODE, REACT & PYTHON</span>
         <span>01 — 04</span>
       </div>

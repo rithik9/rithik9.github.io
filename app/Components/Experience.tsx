@@ -1,4 +1,4 @@
-import { contributions } from "@/data";
+import { roles, education } from "@/data";
 
 export default function Experience() {
   return (
@@ -11,39 +11,46 @@ export default function Experience() {
 
       <div className="section-main">
         <div className="section-heading reveal">
-          <p className="overline">WHAT I&apos;VE WORKED ON</p>
+          <p className="overline">2024 — PRESENT</p>
           <h2>
             Experience<span>.</span>
           </h2>
           <p>Real projects, real constraints, and a few numbers I&apos;m proud of.</p>
         </div>
 
-        <div className="job-intro reveal">
-          <div>
-            <span className="job-date">NOV 2024 — PRESENT</span>
-            <h3>Mango Mass Media</h3>
-            <p>Junior Software Developer · Hyderabad</p>
-          </div>
-          <div className="job-summary">
-            Building backend services, document processing systems and internal
-            tools. I work with both product stakeholders and the people who use
-            what we ship.
-          </div>
-        </div>
-
-        <div>
-          {contributions.map((c, i) => (
-            <article className="contribution reveal" key={c.title}>
-              <span className="contribution-no">{String(i + 1).padStart(2, "0")}</span>
+        {roles.map((role) => (
+          <div className="role" key={role.date}>
+            <div className="job-intro reveal">
               <div>
-                <p className="contribution-area">{c.area}</p>
-                <h3>{c.title}</h3>
-                <p className="contribution-description">{c.description}</p>
-                <p className="contribution-tools">{c.tools}</p>
+                <span className="job-date">{role.date}</span>
+                <h3>{role.company}</h3>
+                <p>{role.position}</p>
               </div>
-              <strong className="contribution-result">{c.result}</strong>
-            </article>
-          ))}
+              <div className="job-summary">{role.summary}</div>
+            </div>
+
+            {role.contributions.map((c, i) => (
+              <article className="contribution reveal" key={c.title}>
+                <span className="contribution-no">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <p className="contribution-area">{c.area}</p>
+                  <h3>{c.title}</h3>
+                  <p className="contribution-description">{c.description}</p>
+                  <p className="contribution-tools">{c.tools}</p>
+                </div>
+                <strong className="contribution-result">{c.result}</strong>
+              </article>
+            ))}
+          </div>
+        ))}
+
+        <div className="job-intro education reveal">
+          <div>
+            <span className="job-date">{education.date}</span>
+            <h3>{education.school}</h3>
+            <p>{education.degree}</p>
+          </div>
+          <div className="job-summary">Education</div>
         </div>
       </div>
     </section>

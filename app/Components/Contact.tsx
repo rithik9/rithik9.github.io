@@ -1,8 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
-const RESUME = "/resume/Resume_Rithik_Kishen_Saride.pdf";
+import { links } from "@/data";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -46,26 +45,26 @@ export default function Contact() {
 
       <div className="section-main">
         <div className="section-heading reveal">
-          <p className="overline">THE NEXT CONVERSATION</p>
+          <p className="overline">GET IN TOUCH</p>
           <h2>
-            Say hello<span>.</span>
+            Contact<span>.</span>
           </h2>
-          <p>Whether it&apos;s an opportunity, a project, or just a good engineering conversation.</p>
+          <p>Use the form, or reach me on LinkedIn.</p>
         </div>
 
         <div className="contact-content">
           <div className="reveal">
             <p className="contact-large">
-              Good work starts with <em>a conversation.</em>
+              Open to <em>full stack and backend roles.</em>
             </p>
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/rithik-kishen-saride-4718581b5/" target="_blank" rel="noopener noreferrer">
+              <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
                 LinkedIn <span className="arrow">↗</span>
               </a>
-              <a href="https://github.com/rithik9" target="_blank" rel="noopener noreferrer">
+              <a href={links.github} target="_blank" rel="noopener noreferrer">
                 GitHub <span className="arrow">↗</span>
               </a>
-              <a href={RESUME} target="_blank" rel="noopener noreferrer">
+              <a href={links.resume} target="_blank" rel="noopener noreferrer">
                 Résumé <span className="arrow">↗</span>
               </a>
             </div>

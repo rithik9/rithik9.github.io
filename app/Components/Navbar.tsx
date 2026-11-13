@@ -36,7 +36,7 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        <span className="header-caption">SELECTED WORK / 2026</span>
+        <span className="header-caption">FULL STACK ENGINEER</span>
       </div>
     </header>
   );

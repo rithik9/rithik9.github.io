@@ -16,7 +16,7 @@ export default function ProfilePhoto() {
         />
       </div>
       <div className="portrait-notes">
-        <span>FIG. 01 — THE PERSON BEHIND THE CODE</span>
+        <span>RITHIK KISHEN SARIDE</span>
         <span>HYD / IN</span>
       </div>
       <span className="offset-square" aria-hidden="true" />
