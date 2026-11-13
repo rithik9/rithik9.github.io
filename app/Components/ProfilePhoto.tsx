@@ -5,13 +5,10 @@ export default function ProfilePhoto() {
   return (
     <div className="portrait-composition reveal">
       <div className="portrait-frame">
-        <div className="portrait-fallback">
-          RK<span>_</span>
-        </div>
         <Image
           className="portrait-img"
           src={profilePhoto}
-          alt="Rithik"
+          alt="Rithik Kishen Saride"
           priority
         />
       </div>
